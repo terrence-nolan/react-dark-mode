@@ -6,11 +6,13 @@
   justify-content: center;
   align-items: center;
   background-color: var(--background-color);
+  transition: background-color 0.25s ease-in-out;
 }
 
 .title {
   color: var(--primary-text-color);
   margin-bottom: 50px;
+  transition: color 0.25s ease-in-out;
 }
 
 .box {
@@ -18,4 +20,5 @@
   border-radius: 10px;
   background-color: var(--foreground-color);
   color: var(--secondary-text-color);
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }

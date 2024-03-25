@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import useLocalStorage from "use-local-storage";
 import "./App.css";
 import { Toggle } from './components/Toggle';
 
 export const App = () => {
-  const [isDark, setIsDark] = useState(true);
+  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useLocalStorage("isDark", preference);
 
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
